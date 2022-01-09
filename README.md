@@ -27,5 +27,5 @@ https://spotipy.readthedocs.io/en/2.19.0/
 Frontend & Linking References:
 https://www.youtube.com/watch?v=kng-mJJby8g  
 https://www.youtube.com/watch?v=dam0GPOAvVI  
-https://www.w3schools.com/html/html_examples.asp
+https://www.w3schools.com/html/html_examples.asp 
 https://www.youtube.com/watch?v=gu2jyJ6oIdk

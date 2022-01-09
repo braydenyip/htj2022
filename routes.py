@@ -16,7 +16,7 @@ def run_app():
                             stdout=subprocess.PIPE, 
                             stderr=subprocess.PIPE)
     print(output)
-    return 'it ran... maybe'
+    return render_template("results.html", results="output")
 
 ## JSON reading
 @routes.route("/json/")
