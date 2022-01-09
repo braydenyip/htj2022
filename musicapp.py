@@ -43,10 +43,15 @@ def authentic_version(sp):
     print(hs_track['artists'][0]['name'], " - ", hs_track['name'])
     print("score= {0:.3f}".format(hi_score)) #round format to 3dp
     user_id = sp.current_user()['id'] #get user id/username
+
+    #makes a playlist
     playlist = sp.user_playlist_create(user_id, "Playlist for " + user_id, description = "Created by Song Finder" ) #makes a public playlist
+
+    #this function adds songs to a playlist.
     sp.user_playlist_add_tracks(user_id, playlist['id'], [hs_track['id']]) # adds the highest scoring track
     # the third variable can be the url of any number of songs in a list, requires a list to be taken
     # just change "hi_score_track" to whatever variable contains a track id
+
     pid = playlist['id'] #pid = the unique id of the playlist
 def main():
     scopes = ["user-library-read", "playlist-modify-public"]
