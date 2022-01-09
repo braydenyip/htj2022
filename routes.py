@@ -11,8 +11,10 @@ def home():
 @routes.route("/music-app/", methods=['GET', 'POST'])
 def run_app():
     print('----------------------------------')
-    output = subprocess.Popen('python3 musicapp.py', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    output.wait()
+    output = subprocess.run(['python3 musicapp.py > output.txt'], 
+                            shell=True, 
+                            stdout=subprocess.PIPE, 
+                            stderr=subprocess.PIPE)
     print(output)
     return 'it ran... maybe'
 
