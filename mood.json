@@ -1,30 +1,28 @@
 {
     "Positive": [
         {
-            "Happy": {"low": 305.000, "high": 310.999},
-            "Energetic": {"low": 311.000, "high": 315.999},
-            "Elegant": {"low": 316.000, "high": 320.999},
-            "Epic": {"low": 321.000, "high": 400.000}
+            "Happy": {"low": 1.500, "high": 1.999},
+            "Energetic": {"low": 1.300, "high": 1.499},
+            "Elegant": {"low": 1.200, "high": 1.299},
+            "Epic": {"low": 1.100, "high": 1.199}
         }
     ],
     "Negative": [
         {
-            "Broken": 282.000,
-            "Depression": 283.999,
-            "Despair": 284.000,
-            "Doom": 284.999,
-            "Lost": 285.000,
-            "Sad": 285.999,
-            "Melancholic": 286.000,
-            "Stressed": 286.999
+            "Broken": {"low": 0.000, "high": 0.050},
+            "Depression": {"low": 0.049, "high": 0.080},
+            "Despair": {"low": 0.079, "high": 0.199},
+            "Doom": {"low": 0.000, "high": 0.199},
+            "Lost": {"low": 0.000, "high": 0.199},
+            "Sad": {"low": 0.000, "high": 0.199}
         }
     ],
     "Neutral": [
         {
-            "Shy": {"low": 287.000, "high": 288.999},
-            "Scared": {"low": 289.000, "high": 299.999},
-            "Mood": {"low": 300.000, "high": 301.999},
-            "Satisfied": {"low": 302.000, "high": 304.999}
+            "Shy": {"low": 0.000, "high": 0.998},
+            "Scared": {"low": 0.000, "high": 0.997},
+            "Mood": {"low": 0.000, "high": 0.996},
+            "Satisfied": {"low": 0.999, "high": 1.099}
         }
     ]
 }
