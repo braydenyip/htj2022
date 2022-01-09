@@ -34,18 +34,20 @@ def authentic_version(sp):
         score = 0.15*e+0.6*d+0.6*v
         #logic to figure out highest score, printout is to show program is running
         if (score > hi_score):
-            hi_score_track = track['uri']
+            hi_score_track_uri = track['uri']
             hi_score = score
             print(i, '*')
         else:
             print(i)
-    print(sp.track(hi_score_track)['artists'][0]['name'], " - ", sp.track(hi_score_track)['name'])
-    print("score= {0:.3f}".format(hi_score))
-    print(sp.track(hi_score_track))
-    user_id = sp.current_user()['id']
-    playlist = sp.user_playlist_create(user_id, "Playlist for " + user_id, description = "Created by Song Finder" )
-    sp.user_playlist_add_tracks(user_id, playlist['id'], [sp.track(hi_score_track)['id']])
-
+    hs_track = sp.track(hi_score_track_uri)
+    print(hs_track['artists'][0]['name'], " - ", hs_track['name'])
+    print("score= {0:.3f}".format(hi_score)) #round format to 3dp
+    user_id = sp.current_user()['id'] #get user id/username
+    playlist = sp.user_playlist_create(user_id, "Playlist for " + user_id, description = "Created by Song Finder" ) #makes a public playlist
+    sp.user_playlist_add_tracks(user_id, playlist['id'], [hs_track['id']]) # adds the highest scoring track
+    # the third variable can be the url of any number of songs in a list, requires a list to be taken
+    # just change "hi_score_track" to whatever variable contains a track id
+    pid = playlist['id'] #pid = the unique id of the playlist
 def main():
     scopes = ["user-library-read", "playlist-modify-public"]
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope= scopes, client_id = id, client_secret = secrt, redirect_uri= 'http://localhost:8080'))
