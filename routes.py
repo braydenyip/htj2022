@@ -10,7 +10,8 @@ def home():
 ## Redirecting to a page - not returning redirect(url_for("routes.home"))
 @routes.route("/music-app/", methods=['GET', 'POST'])
 def run_app():
-    print('----------------------------------')
+    print('----------------------------------') 
+    # runs musicapp.py in the backgroud and sends it's output printed on our webpage
     output = subprocess.run(['python3 musicapp.py > output.txt'], 
                             shell=True, 
                             stdout=subprocess.PIPE, 
@@ -23,6 +24,7 @@ def run_app():
 def get_json():
     return jsonify({'app': ['valence', 'tempo', 'loudness', 'timbre']})
 
+## Future: Authenticating the user's email to connect to the dev environment
 @routes.route("/auth/", methods=['GET', 'POST'])
 def get_auth():
     error=None

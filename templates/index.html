@@ -2,44 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script 
-    src="http://code.jquery.com/jquery-3.3.1.min.js" 
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
-    crossorigin="anonymous">
-  </script>
-  <title>Hack the Job</title>
+  <title>Hack The Job 2022</title>
+  <style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+ .topright{
+   position:absolute;
+   top:5px;
+   right:10px;
+  }
+  .center{
+  top:20px;
+  text-align: center;
+  }
+  h3 {font-family: 'Gruppo', cursive; font-size: 30px; color:white;}
+  h2 {font-size: 65px; font-family: 'Annie Use Your Telescope', cursive; color:white;}
+  button {color: white; background-color: green; border: 2px solid green;
+  border-radius: 5px; text-transform: uppercase; font-size: 25px;}
+  body {background-image:url(night_medium.jpg); background-size:100%;}
+</style>
 </head>
-<body>
-  <div> <h1>
-   Valgrind my Mind team
-  </h1></div>
+<body bgcolor="#212121">
+<!-- 
 <div>
  <p> Seeing now how to connect the music app, {{app}}. Your results are from {{result}} </p>
 </div>
-
+-->
+<h3>Valgrind My Mind</h3>
+<div class="topright">
+<h3>Hack The Job</h3>
+</div>
+<div class="center">
 <form action="/music-app/">
   <h3>Welcome to Hack the Job!</h3>
     <button type="submit" class="btn btn-primary" ><a href=/htj/music-app/>BEGIN</button>
-    <!-- onclick="run_musicapp()" -->
-    <!-- from: https://stackoverflow.com/questions/55568844/run-python-script-with-a-button-from-my-website 
-    <script>
-      function run_musicapp(){
-          $.ajax({
-            type: 'POST',
-            url: "/musicapp.py",
-            dataType: "text",
-            success: function (data) {
-              alert(data)
-            },
-            error: function (data) {
-              alert(data)
-            }
-          });
-      }
-  </script>
-  -->
-  </form>
+</form>
 </body>
 </html>
