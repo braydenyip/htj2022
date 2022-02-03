@@ -5,8 +5,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from spotipy.oauth2 import SpotifyOAuth
 
 #secret will be made invalid on Monday, if you need it again lmk
-id="2e7959faa85f44d6b2e859064f9dd1aa"
-secrt="2514bb7ab37e449ba19db71e9f43bfc2"
+#id=<REDACTED>
+#secrt=<REDACTED>
 
 def authentic_version(sp):
 
